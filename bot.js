@@ -98,10 +98,9 @@ client.on('guildMemberAdd', async (member) => {
       });
 
       const payload = {
-        discordUserId: member.user.id,
         discordUsername: member.user.username,
         inviteCode: usedInvite.code,
-        invitedBy: usedInvite.inviter?.id,
+        invitedBy: usedInvite.inviter?.username,
       };
 
       log('debug', 'Sending referral data to API', {
